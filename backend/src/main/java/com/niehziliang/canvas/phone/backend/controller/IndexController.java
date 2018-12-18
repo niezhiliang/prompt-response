@@ -21,7 +21,7 @@ public class IndexController {
     public Object upload(@RequestBody UploadMo uploadMo) {
        if (uploadMo.getBase64() != null && uploadMo.getUserid() != null) {
            SocketServer.sendMessage(uploadMo.getBase64(),uploadMo.getUserid());
-           System.out.println(uploadMo.getBase64());
+           System.out.println(uploadMo.getUserid()+"--------"+uploadMo.getBase64());
        }
         Map<String,String> map  = new HashMap<String,String>();
         map.put("status","20");
