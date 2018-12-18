@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  websocket:
+    image: suyu/backend:v1.0.0
+    restart: always
+    container_name: phone-draw
+    hostname: phone-draw
+    ports:
+      - "8080:8080"
+    volumes:
+      - /etc/timezone:/etc/timezone
+      - /etc/localtime:/etc/localtime
